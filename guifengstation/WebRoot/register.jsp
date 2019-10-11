@@ -126,7 +126,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     </style>
 
 </head>
-<body background="img/preview.jpg">
+<body background="registerImg/preview.jpg">
 
     <div style="height:80px;"></div>
     
