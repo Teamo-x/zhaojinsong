@@ -23,6 +23,13 @@
     <servlet-name>loginServlet</servlet-name>
     <servlet-class>Servlets.loginServlet</servlet-class>
   </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>managementConsulting</servlet-name>
+    <servlet-class>Servlets.managementConsulting</servlet-class>
+  </servlet>
+
 
 
 
@@ -37,6 +44,10 @@
   <servlet-mapping>
     <servlet-name>loginServlet</servlet-name>
     <url-pattern>/loginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>managementConsulting</servlet-name>
+    <url-pattern>/managementConsulting</url-pattern>
   </servlet-mapping>	
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>

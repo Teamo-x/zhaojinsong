@@ -96,7 +96,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						
 						<!-- Pagging -->
 						<div class="pagging">
-							<div class="left">Showing 1-12 of 44</div>
+							<div class="left">页码</div>
 							<div class="right">
 								<a href="#">上一页</a>
 								<a href="#">1</a>
@@ -123,24 +123,36 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<div class="box-head">
 						<h2>添加新资讯</h2>
 					</div>
-					<!-- End Box Head -->
 					
-					<form action="" method="post">
+					
+					<!-- 新闻公告发布 -->
+					
+					<form action="managementConsulting" method="post" enctype="multipart/form-data">
 						
 						<!-- Form -->
 						<div class="form">
 								<p>
 									<span class="req">不超过30个字</span>
 									<label>文章标题</label>
-									<input type="text" class="field size1" />
+									<input type="text" class="field size1"  name="title"/>
 									<br>
+								</p>
+								<p>
+								<label>作者</label>
+								<input type="text" class="field size1"  name="author"/>
 								</p>
 								<br>
 								<br>
 								<br>
 								<p>
+								 <h3>相关图片上传</h3>
+								</p>
+								<p>
+								<input type="file" name="img" />
+								</p>
+								<p>
 								
-								<h2>文章内容请符合富强、民主、文明、和谐、自由、平等、公正、法治、爱国、敬业、诚信、友善。</h2>
+								<h2>文章内容请符合富强、民主、文明、和谐、自由、平等、公正、法治、爱国、敬业、诚信、友善的正确价值观</h2>
 								</p>	
 							<br>
 							<br>
@@ -150,13 +162,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			
 									<span class="req">万字以内</span>
 									<label>内容</label>
-									<textarea class="field size1" rows="10" cols="30"></textarea>
+									<textarea class="field size1" rows="10" cols="30" name="content"></textarea>
 								</p>	
 							
 						</div>
-						<!-- End Form -->
 						
-						<!-- Form Buttons -->
+						
+						
 						<div class="buttons">
 							<input type="reset" class="button" value="重置" />
 							<input type="submit" class="button" value="提交" />
