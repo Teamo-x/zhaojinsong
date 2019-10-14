@@ -16,6 +16,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <script src="https://static.runoob.com/assets/jquery-validation-1.14.0/lib/jquery.js"></script>
 <script src="https://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
 <script src="https://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
+<link rel="stylesheet" href="registerCss/style.css">
 <script type="text/javascript">
 //自定义校验规则
 	$.validator.addMethod(
@@ -39,7 +40,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				"dataType":"json",
 				"success":function(data){
 				//alert(flag);
-					flag = data.isExist;
+					flag = data.isExist;// 如何将flag的值返给程序,需要在外面定义flag
 				}
 			});
 			
@@ -70,12 +71,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				"phone":{
 					"required":true,
 					
-				}
+				},
 				
 			},
 			messages:{
 				"username":{
-					"required":"用户名不可空",
+					"required":"用户名不能为空",
 					"checkUsername":"用户名已存在"
 				},
 				"loginpass1":{
@@ -94,7 +95,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			}
 		});
 	});
-
 
 </script>
 
@@ -123,11 +123,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         }
 
 
+    .one{
+        position: absolute;
+      z-index:999;
+     
+    }  
+
     </style>
 
 </head>
-<body background="registerImg/preview.jpg">
-
+<body>
+  <div class="one">
     <div style="height:80px;"></div>
     
     <form  id="myform" method="post" action="registerServlet"> 
@@ -139,7 +145,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <label for="username" class="l">用户名:</label>
             <div style="height:35px;width:300px;position:relative;display:inline;">
             
-                <input name="username" id="username" type="text" style="height:30px;width:300px;padding-right:50px;">
+                <input autocomplete="off" name="username" id="username" type="text" style="height:30px;width:300px;padding-right:50px;background-color: rgba(0,0,0,0)">
                 
                 <span style="position:absolute;right:18px;top:2px;background-image:url(user.ico);height:16px;width:16px;display:inline-block;" ></span>
             </div>
@@ -148,7 +154,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <label for="phonenumber" class="l">手机号:</label>
             <div  class="d">
             
-                <input name="phone" id="phone" type="text" class="i">
+                <input autocomplete="off" style="background-color: rgba(0,0,0,0);" name="phone" id="phone" type="text" class="i">
                 
             </div>
             <br/><br/>
@@ -156,7 +162,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <label for="login_password" class="l">登录密码:</label>
             <div  class="d">
             
-                <input name="loginpass1" id="loginpass1" type="text" class="i">
+                <input autocomplete="off"  style="background-color: rgba(0,0,0,0);" name="loginpass1" id="loginpass1" type="text" class="i">
             </div>
             
             <br/><br/>
@@ -164,12 +170,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <label for="confirm_password" class="l">确认密码:</label>
             <div  class="d">
             
-                <input  name="loginpass2" id="loginpass2" type="text" class="i">
+                <input autocomplete="off" style="background-color: rgba(0,0,0,0);" name="loginpass2" id="loginpass2" type="text" class="i">
                 
             </div>
             <br/><br/>
             
-            <input type="checkbox" name="agree" style="margin-left:100px;display:inline-block;" value="1"/>
+            <input autocomplete="off" type="checkbox" name="agree" style="margin-left:100px;display:inline-block;" value="1"/>
             <span style="font-size:10px;">我已阅读并同意<a href="employeeBehaviorSpecification.jsp">《公司员工规范》</a></span>
             <br/><br/>
          
@@ -178,10 +184,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         </div>
 
     </form>
-	<div style="position:fixed; right:10px; bottom:10px;">
-    <audio autoplay="autoplay" controls="controls"loop="loop" preload="auto"
-            	src="mp3/HOP.mp3">
+    </div>
+	
+          <div class="two">
+             	 <audio autoplay="autoplay" controls="controls"loop="loop" preload="auto"
+            	src="mp3/yinyue.mp3">
             		</audio>
-            	</div>
+            	<div id="background" class="wall"></div>
+               <div id="midground" class="wall"></div>
+              <div id="foreground" class="wall"></div>
+               <div id="top" class="wall"></div>
+               </div>
 </body>
 </html>

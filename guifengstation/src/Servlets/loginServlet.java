@@ -90,7 +90,7 @@ public class loginServlet extends HttpServlet {
 	    	    	 HttpSession session = request.getSession();
 	    	    	   session.setAttribute("loginname", a.getAdminName());
 	    	    		response.getWriter().print("<script language='javascript'>alert('登录成功')</script>");
-						  response.setHeader("refresh", "1;URL=operation.jsp");
+						  response.setHeader("refresh", "1;URL=PageServlet");
 	    	     }else{
 	    	    	 response.getWriter().print("<script language='javascript'>alert('账号名或密码错误')</script>");
 					  response.setHeader("refresh", "1;URL=AdminLogin.jsp");

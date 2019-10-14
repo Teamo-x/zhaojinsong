@@ -29,6 +29,48 @@
     <servlet-name>managementConsulting</servlet-name>
     <servlet-class>Servlets.managementConsulting</servlet-class>
   </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>PageServlet</servlet-name>
+    <servlet-class>Servlets.PageServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>deleteServlet</servlet-name>
+    <servlet-class>Servlets.deleteServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>searchServlet</servlet-name>
+    <servlet-class>Servlets.searchServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>lookupServlet</servlet-name>
+    <servlet-class>Servlets.lookupServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>viewMessagesServlet</servlet-name>
+    <servlet-class>Servlets.viewMessagesServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>emptymMessageServlet</servlet-name>
+    <servlet-class>Servlets.emptymMessageServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
 
 
 
@@ -48,6 +90,30 @@
   <servlet-mapping>
     <servlet-name>managementConsulting</servlet-name>
     <url-pattern>/managementConsulting</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PageServlet</servlet-name>
+    <url-pattern>/PageServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>deleteServlet</servlet-name>
+    <url-pattern>/deleteServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>searchServlet</servlet-name>
+    <url-pattern>/searchServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>lookupServlet</servlet-name>
+    <url-pattern>/lookupServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>viewMessagesServlet</servlet-name>
+    <url-pattern>/viewMessagesServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>emptymMessageServlet</servlet-name>
+    <url-pattern>/emptymMessageServlet</url-pattern>
   </servlet-mapping>	
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>

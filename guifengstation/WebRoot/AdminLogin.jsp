@@ -106,8 +106,8 @@ input{
     <div id="login">
         <h1>Administrator</h1>
         <form method="post" action="loginServlet">
-            <input type="text" required="required" placeholder="用户名" name="userName"></input>
-            <input type="password" required="required" placeholder="密码" name="passWord"></input>
+            <input type="text" required="required" placeholder="用户名" name="userName" autocomplete="off"></input>
+            <input type="password" required="required" placeholder="密码" name="passWord" autocomplete="off"></input>
             <button class="but" type="submit">登录</button>
          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="register.jsp">新管理员注册</a>
            
